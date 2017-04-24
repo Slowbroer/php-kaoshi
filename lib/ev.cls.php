@@ -98,7 +98,8 @@ class ev
 		{
 			$tmp = explode('#',$_SERVER['QUERY_STRING'],2);
 			$tp = explode('&',$tmp[0],2);
-			$r = explode('-',$tp[0]);
+			$without_wechat = explode("nsukey",$tp[0]);
+			$r = explode('-',$without_wechat[0]);//除掉微信浏览器的后面的参数
 			foreach($r as $key => $p)
 			{
 				$r[$key] = urlencode($p);
