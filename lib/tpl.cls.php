@@ -337,13 +337,13 @@ class tpl
     	}
     	else
     	{
-            var_dump("111");
+//            var_dump("111");
     		if($this->isCache && (!file_exists($outcache) || (time() - filemtime($outcache)) > $this->cacheTime))
 	    	{
-                var_dump("222");
+//                var_dump("222");
 				if($type)
 	    		{
-			    	ob_start();
+//			    	ob_start();
 		    		include $outfile;
 					$cachecontent = ob_get_contents();
 					ob_flush();
@@ -353,7 +353,7 @@ class tpl
 	    	}
 			else
 			{
-                var_dump("333");
+//                var_dump("333");
 				include $outfile;
 			}
     	}
