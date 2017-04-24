@@ -9,7 +9,7 @@ class action extends app
 {
 	public function display()
 	{
-		if($this->ev->isMobile())
+		if($this->ev->isMobile()||$this->ev->is_weixin())
 		{
 			header("location:index.php?content-phone");
 			exit;

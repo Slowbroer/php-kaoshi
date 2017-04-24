@@ -30,6 +30,20 @@ class ev
 		$this->cookie = $this->initData($this->cookie);
     }
 
+	public function is_weixin(){
+
+		if ( strpos($_SERVER['HTTP_USER_AGENT'],
+
+				'MicroMessenger') !== false ) {
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+
    	public function isMobile()
 	{
 		$_SERVER['ALL_HTTP'] = isset($_SERVER['ALL_HTTP'])?$_SERVER['ALL_HTTP']:'';
